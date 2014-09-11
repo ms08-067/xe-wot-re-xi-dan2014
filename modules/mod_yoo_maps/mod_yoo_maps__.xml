@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>YOOmaps</name>
+	<author>YOOtheme</author>
+	<creationDate>March 2008</creationDate>
+	<copyright>Copyright (C) 2007 - 2008 YOOtheme Ltd. &amp; Co. KG</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>info@yootheme.com</authorEmail>
+	<authorUrl>http://www.yootheme.com</authorUrl>
+	<version>1.5.3</version>
+	<description>YOOmaps module of the YOOtheme club (http://www.yootheme.com) for Joomla! 1.5. Requires mootools 1.1</description>
+	<languages>
+		<language tag="en-GB">en-GB.mod_yoo_maps.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_yoo_maps">mod_yoo_maps.php</filename>
+		<filename>mod_yoo_maps.xml</filename>
+		<filename>mod_yoo_maps.js</filename>
+		<filename>changelog.php</filename>
+		<filename>geocode_cache.txt</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+	<params>
+		<param name="google_api_key" type="text" default="" label="Google API key" size="50" description="Custom Google API key needed to use Google maps. Get it at http://code.google.com/apis/maps/signup.html" />
+		<param name="location" type="text" default="" label="Location" size="50" description="Fill in a Address (eg. Hamburg, Germany) or latitude/longitude (eg. 53.553407,9.992196) values to center the map" />
+		<param name="marker_popup" type="radio" default="0" label="Marker popup on load" description="Show marker popup on load">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>			
+		<param name="marker_text" type="textarea" default="" label="Marker text" rows="5" cols="40" description="Marker text" />
+		<param name="main_icon" type="list" default="red-dot" label="Marker icon" description="Select a marker icon">
+			<option value="red-dot">Red dot</option>
+			<option value="orange-dot">Orange dot</option>
+			<option value="yellow-dot">Yellow dot</option>
+			<option value="pink-dot">Pink dot</option>
+			<option value="blue-dot">Blue dot</option>
+			<option value="ltblue-dot">Lightblue dot</option>
+			<option value="green-dot">Green dot</option>
+			<option value="purple-dot">Purple dot</option>
+			<option value="red-pushpin">Red pushpin</option>
+			<option value="ylw-pushpin">Yellow pushpin</option>
+			<option value="pink-pushpin">Pink pushpin</option>
+			<option value="blue-pushpin">Blue pushpin</option>
+			<option value="ltblu-pushpin">Lightblue pushpin</option>
+			<option value="grn-pushpin">Green pushpin</option>
+			<option value="purple-pushpin">Purple pushpin</option>
+		</param>
+		<param name="catid" type="category" default="0" label="Marker category" description="A content category which items are used as markers for the map, use article title for address and body for marker text" />
+		<param name="other_icon" type="list" default="blue-dot" label="Category markers icon" description="Select a marker icon for the category markers">
+			<option value="red-dot">Red dot</option>
+			<option value="orange-dot">Orange dot</option>
+			<option value="yellow-dot">Yellow dot</option>
+			<option value="pink-dot">Pink dot</option>
+			<option value="blue-dot">Blue dot</option>
+			<option value="ltblue-dot">Lightblue dot</option>
+			<option value="green-dot">Green dot</option>
+			<option value="purple-dot">Purple dot</option>
+			<option value="red-pushpin">Red pushpin</option>
+			<option value="ylw-pushpin">Yellow pushpin</option>
+			<option value="pink-pushpin">Pink pushpin</option>
+			<option value="blue-pushpin">Blue pushpin</option>
+			<option value="ltblu-pushpin">Lightblue pushpin</option>
+			<option value="grn-pushpin">Green pushpin</option>
+			<option value="purple-pushpin">Purple pushpin</option>
+		</param>	
+		<param name="items" type="text" default="4" label="No. of category markers" description="Maximum no of category markers to display" />
+		<param name="zoom_level" type="text" default="13" label="Map zoom level" description="Define map zoom level" />
+		<param name="map_controls" type="list" default="2" label="Map zoom controls" description="Show map zoom controls">
+			<option value="0">None</option>
+			<option value="1">Small</option>
+			<option value="2">Large</option>
+		</param>	
+		<param name="scroll_wheel_zoom" type="radio" default="1" label="Map scroll wheel zoom" description="Enable/Disable map scroll wheel zooming">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="map_type" type="list" default="0" label="Map type on load" description="Define the default map type">
+			<option value="0">Normal</option>
+			<option value="1">Satellite</option>
+			<option value="2">Hybrid</option>
+		</param>
+		<param name="type_controls" type="radio" default="1" label="Map type controls" description="Show map type controls">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="overview_controls" type="radio" default="1" label="Map overview" description="Show map overview (Minimap)">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="geocode_cache" type="radio" default="1" label="Geocode caching" description="Optimizes marker loading with cached geocode data">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="directions" type="radio" default="1" label="Show directions" description="Show directions input field">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="directions_dest_update" type="radio" default="0" label="Directions destination update" description="Updates the directions destination to the previously clicked marker">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>		
+		<param name="locale" type="text" default="en" label="Directions language" description="Directions language" />
+		<param name="module_width" type="text" default="500" label="Module width (px)" description="Width of the module" />
+		<param name="module_height" type="text" default="400" label="Module height (px)" description="Height of the module" />
+		<param name="moduleclass_sfx" type="text" default="-blank" label="Module Class Suffix" description="Module Class Suffix" />
+	</params>
+</install>
