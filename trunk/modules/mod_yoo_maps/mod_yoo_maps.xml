@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.1"
+	client="site"
+	method="upgrade">
+	<name>MAP MIA</name>
+	<author>Joomla! Project Mia</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2014.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>kayla.pham.it@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>3.0.0</version>
+	<description>MOD_MAPMIA_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_yoo_maps">mod_yoo_maps.php</filename>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>		
+		<filename>mod_yoo_maps.xml</filename>
+		<filename>mod_yoo_maps.js</filename>
+		<filename>changelog.php</filename>
+		<filename>geocode_cache.txt</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_yoo_maps.ini</language>
+		<language tag="en-GB">en-GB.mod_yoo_maps.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_MAPMIA" />
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field
+					name="google_api_key"
+					type="text"
+					label="Google API key"
+					size="50"
+					description="Custom Google API key needed to use Google maps. Get it at http://code.google.com/apis/maps/signup.html" />
+				<field
+					name="location"
+					type="text"
+					label="Location"
+					size="50"
+					description="Fill in a Address (eg. Hamburg, Germany) or latitude/longitude (eg. 53.553407,9.992196) values to center the map" />
+				<field
+					name="marker_text"
+					type="textarea"
+					label="Marker Text"
+					size="50"
+					description="Marker Text" />
+				<field
+					name="catid"
+					type="category"
+					label="Marker category"
+					size="50"
+					description="A content category which items are used as markers for the map, use article title for address and body for marker text" />
+				<field
+					name="items"
+					type="text"
+					label="No. of category markers"
+					size="50"
+					description="Maximum no of category markers to display" />
+				<field
+					name="zoom_level"
+					type="text"
+					label="Map zoom level"
+					size="50"
+					description="Define map zoom level" />
+				<field
+					name="locale"
+					type="text"
+					label="Directions language"
+					size="50"
+					description="Directions language" />
+				<field
+					name="module_width"
+					type="text"
+					label="Module width (px)"
+					size="50"
+					description="Width of the module" />
+				<field
+					name="module_height"
+					type="text"
+					label="Module height (px)"
+					size="50"
+					description="Height of the module" />
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
